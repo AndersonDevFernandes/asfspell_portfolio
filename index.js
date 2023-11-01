@@ -7,6 +7,17 @@ ScrollReveal().reveal('.name',{
   rotate: { x:90, y:0, z:0},
   delay: 400
 });
+
+ScrollReveal().reveal('.arrow',{
+  rotate: { x:90, y:0, z:0},
+  delay: 700
+});
+
+ScrollReveal().reveal('.arrow1',{
+  rotate: { x:90, y:0, z:0},
+  delay: 1200
+});
+
 ScrollReveal().reveal('.text-1',{
   delay: 400
 });
