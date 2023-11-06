@@ -401,7 +401,7 @@ section.module.parallax-3{
       height: 150px;
   }
 
-  .mid-content{
+  .midContent{
     flex-direction: column;
  }
 }
@@ -421,7 +421,7 @@ section.module.parallax-3{
     padding:20px;
   }
 
-   .mid-content{
+   .midContent{
     flex-direction: column;
  }
 
@@ -500,7 +500,7 @@ section.module.parallax-3{
     padding:20px;
   }
 
-   .mid-content{
+   .midContent{
     flex-direction: column;
  }
 
