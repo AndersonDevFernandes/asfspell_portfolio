@@ -37,7 +37,7 @@ main{
 
 .name{
   margin-left: 5rem;
-  font-size: 60px;
+  font-size: 80px;
   margin-top: 5rem;
   
 }
@@ -50,7 +50,7 @@ main{
   flex-direction: column;
   margin-top: 5rem;
   background-color: transparent;
-  margin-left: 50rem;
+  margin-left: 30rem;
 }
 
 .arrow{
@@ -67,7 +67,8 @@ main{
   color: #EB5200;
   font-weight: 900;
   transform: rotate(180deg);
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+ 
   
   
 }
@@ -274,19 +275,17 @@ main{
   
 }
 
-.form-text-frase{
-  font-size: 25px;
-  font-family: 'Quicksand', sans-serif; 
-  color: #000000;
-  font-weight: 900;
-  
-}
-
 .form-text{
   font-size: 20px;
   font-family: 'Quicksand', sans-serif; 
   color: #000000;
   font-weight: 900;
+}
+.text-3{
+  font-size: 20px;
+  font-family: 'Major Mono Display', monospace;
+  font-weight: 700;
+
 }
 
 .text-end-container{
@@ -353,7 +352,7 @@ section.module.parallax:after{
 
 /* SCROLL REVEAL */
 
-/* .formulario .container1, .container2, .container3, .text-frase, .text-end-container, .text-1, .lista1, .lista2{
+/* .name .site .mid-box .formulario .container1, .container2, .container3, .text-frase, .text-end-container, .text-1, .lista1, .lista2{
   visibility: hidden;
 } */
 
@@ -402,10 +401,6 @@ section.module.parallax-3{
       width: 150px;
       height: 150px;
   }
-
-  .midContent{
-    flex-direction: column;
- }
 }
 
 @media all and (max-width: 910px)  {
@@ -422,10 +417,6 @@ section.module.parallax-3{
     margin: 20px;
     padding:20px;
   }
-
-   .midContent{
-    flex-direction: column;
- }
 
   .img-sites{
     display: flex;
@@ -474,7 +465,6 @@ section.module.parallax-3{
   .lista2{
     margin: 10px;
     gap: 10px;
-    color: white;
   }
 
   section.module.parallax-1{
@@ -501,10 +491,6 @@ section.module.parallax-3{
     margin: 40px;
     padding:20px;
   }
-
-   .midContent{
-    flex-direction: column;
- }
 
   .site{
     width: 190px;
@@ -564,6 +550,5 @@ section.module.parallax-3{
   .lista2{
     margin: 10px;
     gap: 10px;
-    color: white;
   }
 }
