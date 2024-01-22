@@ -15,14 +15,43 @@ body{
 section.module.parallax h1{
   text-align: center;
   z-index: 50;
+  
  }
 
 /* CORPO DO SITE */
 
-h1{
-  font-size: 45px;
+h1, .arrow, .arrow1{
+  font-size: 5rem;
   color: #EB5200;
   font-family: 'Major Mono Display', monospace;
+  margin-left: 1rem;
+
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+  
+}
+
+
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
 }
 
 .wrapper{
@@ -35,12 +64,12 @@ main{
   background-color: #EB7900;
 }
 
-.name{
+/* .name{
   margin-left: 5rem;
   font-size: 80px;
   margin-top: 5rem;
   
-}
+} */
 
 
 .scroll{
@@ -48,9 +77,10 @@ main{
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   background-color: transparent;
-  margin-left: 30rem;
+  margin-left: 50rem;
+  margin-bottom: 80rem;
 }
 
 .arrow{
@@ -62,15 +92,12 @@ main{
 }
 
 .arrow1{
-  font-size: 3rem;
+  font-size: 5rem;
   font-family: 'Major Mono Display', monospace;
   color: #EB5200;
   font-weight: 900;
   transform: rotate(180deg);
-  margin-bottom: 5rem;
- 
-  
-  
+  margin-bottom: 3rem;
 }
 
 .container1{
@@ -78,6 +105,12 @@ main{
   max-width: 760px;
   margin: 0 auto;
   padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+
 }
 
 .text-1{
@@ -93,7 +126,12 @@ main{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 30px;
+ position: relative;
+ width: 100%;
+ height: 100%;
+ margin-bottom: 20px;
+ gap: 20px;
+
 }
 
 .photo{
@@ -105,15 +143,34 @@ main{
 }
 
 .site{
-  width: 400px;
-  height: 250px;
-  border-radius: 20%;
+width: 550px;
+height: 280px;
+border-radius: 3%;
+object-fit: cover;
+
 }
 
-.site:hover{
+input[type=radio]{
+  display: none;
+}
+
+.card{
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+
+}
+
+
+
+/* .site:hover{
   transform: scale(1.1);
   transition: 0.8s;
-}
+} */
 
 .container2{
   width: 100%;
@@ -175,6 +232,7 @@ main{
   align-items: center;
   justify-content: space-between;
 }
+
 .container4{
   width: 100%;
   max-width: 760px;
@@ -184,7 +242,6 @@ main{
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  
 }
 
 .mid-box{
@@ -285,7 +342,12 @@ main{
   font-size: 20px;
   font-family: 'Major Mono Display', monospace;
   font-weight: 700;
+  animation: .8s shake infinite alternate;
 
+}
+
+.text-end{
+  animation: .8s shake infinite alternate;
 }
 
 .text-end-container{
@@ -295,11 +357,40 @@ main{
   font-family: 'Major Mono Display', monospace;
   font-size: 20px;
   font-weight: 700;
+
+  
 }
 
 
 .icon{
   gap: 30px;
+  position: relative;
+  letter-spacing: 6px;
+  font-size: 10vw;
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  background-size: 120% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -ms-background-clip: text;
+  -ms-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: .8s shake infinite alternate;
+
+}
+
+@keyframes shake {
+  0% { transform: skewX(-10deg); }
+  5% { transform: skewX(10deg); }
+  10% { transform: skewX(-10deg); }
+  15% { transform: skewX(10deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }
 }
 
 section.module p{
@@ -352,7 +443,7 @@ section.module.parallax:after{
 
 /* SCROLL REVEAL */
 
-/* .name .site .mid-box .formulario .container1, .container2, .container3, .text-frase, .text-end-container, .text-1, .lista1, .lista2{
+/* .formulario .container1, .container2, .container3, .text-frase, .text-end-container, .text-1, .lista1, .lista2{
   visibility: hidden;
 } */
 
@@ -401,6 +492,23 @@ section.module.parallax-3{
       width: 150px;
       height: 150px;
   }
+
+  .midBox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  
+  .text-3{
+    font-size: 12px;
+  }
+
+  .text-end{
+    font-size: 12px;
+  }
 }
 
 @media all and (max-width: 910px)  {
@@ -416,6 +524,11 @@ section.module.parallax-3{
     font-size: 30px;
     margin: 20px;
     padding:20px;
+  }
+
+  .arrow, .arrow1{
+    align-items: center;
+    justify-content: center;
   }
 
   .img-sites{
@@ -443,8 +556,6 @@ section.module.parallax-3{
     align-items: center;
     flex-direction: column;
     font-size: 5px;
-    
-       
   }
 
   .skills{
@@ -465,6 +576,7 @@ section.module.parallax-3{
   .lista2{
     margin: 10px;
     gap: 10px;
+    color: white;
   }
 
   section.module.parallax-1{
@@ -472,9 +584,18 @@ section.module.parallax-3{
     align-items: center;
     justify-content: center;
   }
+
+  
+  .text-3{
+    font-size: 12px;
+  }
+
+  .text-end{
+    font-size: 12px;
+  }
 }
 
-/* laptop */
+
 
 @media all and (max-width: 599px)  {
   section.module h2, section.module.parallax-1 {
@@ -484,6 +605,11 @@ section.module.parallax-3{
     align-items: center;
     width: 100%;
     
+  }
+
+  .arrow, .arrow1{
+    align-items: center;
+    justify-content: center;
   }
 
   .name{
@@ -550,5 +676,188 @@ section.module.parallax-3{
   .lista2{
     margin: 10px;
     gap: 10px;
+    color: white;
+  }
+
+  .text-3{
+    font-size: 12px;
+  }
+
+  .text-end{
+    font-size: 12px;
   }
 }
+
+
+/* Estilos padrão */
+
+/* ... (seu código existente) ... */
+
+/* Responsividade para telas até 425px */
+@media screen and (max-width: 425px) {
+  .mid-box {
+    flex-direction: column;
+  }
+
+  .formulario {
+    margin-right: 0;
+  }
+
+  .email-user {
+    width: 100%;
+  }
+
+  .container2 {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .lista1,
+  .lista2 {
+    text-align: center;
+  }
+
+  .box-text{
+    width: 300px;
+    height: 150px;
+  }
+
+  .emaill{
+    width: 350px;
+    height: 30px;
+  }
+
+  .text-2, .form-text, .box-text{
+    font-size: 16px;
+  }
+
+  
+}
+
+/* Responsividade para telas até 768px */
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .formulario {
+    margin-right: 0;
+  }
+
+  .form-main{
+    flex-direction: column;
+  }
+
+  .container2 {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .lista1,
+  .lista2 {
+    text-align: center;
+  }
+
+  .box-text{
+    width: 300px;
+    height: 150px;
+  }
+
+  .emaill{
+    width: 200px;
+    height: 30px;
+  }
+}
+
+/* HEADER */
+
+@media screen and (max-width: 425px) {
+  h1 {
+    font-size: 3rem;
+    margin-left: 0.5rem;
+  }
+
+  .scroll {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 3rem;
+  }
+
+  .arrow {
+    font-size: 1rem;
+  }
+
+  .arrow1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .scroll {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 4rem;
+  }
+
+  .arrow1 {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .scroll {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5rem;
+  }
+
+  .arrow1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* Adicione ajustes específicos, se necessário */
+}
+
+
+/* FOOTER */
+
+@media screen and (max-width: 425px) {
+  .container3,
+  .container4 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 768px) {
+  .container3,
+  .container4 {
+    max-width: 100%;
+    padding: 0 10px;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .container3,
+  .container4 {
+    max-width: 100%;
+    padding: 0 20px;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+  /* Adicione ajustes específicos, se necessário */
+}
+
